@@ -1,0 +1,20 @@
+*{
+	--red: #bf616a;
+	--green: #78daca;
+	--blue: #72a2f7;
+	--fg: #cccccc;
+	--bg: #181f21;
+}
+body{
+	background-color: var(--bg);
+}
+h1{
+	background-color: var(--bg);
+}
+#Texto{
+	background-color: var(--blue);
+	color: var(--bg);
+}
+#Texto{
+	padding: 0;
+}

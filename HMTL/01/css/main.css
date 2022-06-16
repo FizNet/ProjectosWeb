@@ -1,0 +1,46 @@
+*{
+    --bg: #181F21;
+    --orange: #D49474;
+    --fg: #BDC3C2;
+}
+body{
+    background-color: var(--bg);
+}
+.button-container{
+    display: flex;
+    justify-content: center;
+    padding: 10vh 0 0 0;
+}
+#playBtn, #pauseBtn{
+    font-family: 'Comfortaa';
+    font-size: 50px;
+    padding: 25px;
+    border: 0;
+    border-radius: 8px;
+    color: var(--fg);
+    margin: 0 20px;
+    background-color: transparent;
+    transition-property: var(--bg);
+    transition-duration: .5s;
+}
+#playBtn:hover, #pauseBtn:hover{
+    background-color: var(--orange);
+    color: var(--bg);
+    transition-property: var(--bg);
+    transition-duration: .5s;
+}
+#music-status{
+    background-color: var(--orange);
+    font-size: 30px;
+    padding: 25px;
+    border: 0;
+    border-radius: 8px;
+    color: var(--bg);
+    transition-property: var(--bg);
+    transition-duration: .5s;
+}
+.text-container{
+    display: flex;
+    justify-content: center;
+    padding: 10vh 0 0 0;
+}
