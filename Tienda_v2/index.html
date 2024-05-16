@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static/css/main.css" />
+    <title>Tienda</title>
+  </head>
+
+  <body>
+    <nav class="bar">
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="26"
+              viewBox="0 96 960 960"
+              width="26">
+              <path
+                d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"
+              />
+            </svg
+          ></a>
+        </li>
+        <li><a href="#">inicio</a></li>
+        <li><a href="#">catalogo</a></li>
+        <li><a href="#">carrito de compras</a></li>
+        <li><a href="#">contacto</a></li>
+      </ul>
+      <ul class="mainbar">
+        <li><a href="#">Tienda</a></li>
+        <li class="hideOnMobile"><a href="#">inicio</a></li>
+        <li class="hideOnMobile"><a href="#">catalogo</a></li>
+        <li class="hideOnMobile"><a href="#">carrito de compras</a></li>
+        <li class="hideOnMobile"><a href="#">contacto</a></li>
+        <li class="menu-button" onclick="showSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="26"
+              viewBox="0 96 960 960"
+              width="26"
+            >
+              <path
+                d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"
+              /></svg
+          ></a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <!-- <h1 id="titulo">Tienda de celulares</h1> -->
+      <p>celulares</p>
+      <div id="trending-box"></div>
+    </main>
+    <script type="module" src="static/js/script.js"></script>
+    <script src="static/js/fn.js"></script>
+  </body>
+</html>

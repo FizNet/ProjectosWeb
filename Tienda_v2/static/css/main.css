@@ -1,0 +1,248 @@
+:root {
+  --base-h: 0;
+  --base-s: 0%;
+  --base-l: 7%;
+  --bg-1: #121212;
+  --bg-2: #1b1b1b;
+  --bg-3: #1f1f1f;
+  --bg-4: #222222;
+  --accent-1: #6b5dd0;
+  --accent-l-1: #c8e6c9;
+  --white: #ebebeb;
+  --fg: var(--white);
+  --fg-a: var(--bg-1);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-1);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.bar {
+  background-color: var(--bg-2);
+}
+
+.mainbar {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.bar li {
+  height: 50px;
+}
+
+.bar a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 25px;
+  color: var(--fg);
+  font-weight: 600;
+  font-size: 0.85em;
+  text-transform: uppercase;
+}
+
+.bar li:first-child {
+  margin-right: auto;
+  background-color: var(--accent-1);
+  & a {
+    color: var(--fg);
+  }
+}
+
+.bar .menu-button {
+  display: none;
+  & svg {
+    fill: var(--fg);
+  }
+}
+
+.sidebar {
+  background-color: var(--bg-3);
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  /* min-width: 250px; */
+  /* max-width: 250px; */
+  z-index: 999;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  transition: 400ms;
+}
+.sidebar li {
+  width: 100%;
+}
+.sidebar a {
+  color: var(--fg);
+  width: 100%;
+}
+.sidebar li:first-child {
+  width: 48px;
+  height: 48px;
+  background-color: transparent;
+  margin: 0.5em;
+  margin-left: auto;
+  padding: 0;
+  & svg {
+    margin: auto;
+    fill: var(--fg);
+  }
+}
+.sidebar li:first-child a {
+  background-color: var(--accent-1);
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+#titulo,
+#trending-box {
+  color: var(--fg);
+}
+
+#trending-box {
+  display: flex;
+  gap: 20px;
+  margin: auto;
+  width: 520px;
+  /* height: 400px; */
+  background-color: transparent;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  align-items: center;
+  padding: 10px;
+  border-radius: calc(0.5em + 10px);
+}
+
+.phone-box {
+  border-radius: calc(0.25em + 10px);
+  background-color: var(--bg-2);
+  scroll-snap-align: center;
+  min-width: 99%;
+  max-width: 99%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5em;
+  box-sizing: border-box;
+  /* align-items: center; */
+  overflow: hidden;
+  /* filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.15)); */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.phone-box img {
+  height: 300px;
+  width: auto;
+  margin: 0.25em;
+  filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.15));
+  /* hei */
+}
+
+#phone-name-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: var(--bg-4);
+  border-radius: 10px;
+  padding: 0.5em 0.75em;
+  /* height: 100%; */
+  gap: 0px;
+}
+
+#phone-name {
+  font-size: 2rem;
+  color: var(--accent-1);
+  font-weight: normal;
+}
+
+#phone-brand {
+  font-variant-caps: all-small-caps;
+  margin-bottom: -0.2em;
+}
+
+#phone-props-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#phone-price {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+  color: var(--fg);
+  background-color: var(--accent-1);
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: start;
+  height: 2em;
+  /* margin-left: -5em; */
+  border-top-right-radius: 400px;
+  border-bottom-right-radius: 400px;
+  position: relative;
+  bottom: 25%;
+  left: -10%;
+  padding: 0 0.75em;
+}
+
+::-webkit-scrollbar {
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: none;
+  background-clip: content-box;
+}
+
+@media (max-width: 700px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .bar .menu-button {
+    display: block;
+  }
+  #phone-props-box {
+    gap: 2em;
+  }
+  .phone-box {
+    flex-direction: column-reverse;
+    gap: 2em;
+  }
+  .phone-box img {
+    display: block;
+    margin: auto;
+    width: auto;
+    height: 300px;
+  }
+  #phone-price {
+    right: 50%;
+    margin-bottom: 1em;
+    left: -0.5em;
+  }
+  #trending-box {
+    height: fit-content;
+    width: 80%;
+  }
+}
